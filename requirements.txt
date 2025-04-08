@@ -5,3 +5,4 @@ statsmodels
 numpy
 xlsxwriter
 openpyxl
+plotly
