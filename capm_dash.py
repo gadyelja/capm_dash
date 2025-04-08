@@ -17,14 +17,15 @@ st.markdown("""
 """, unsafe_allow_html=True) # Título
 
 # Importar bases 
-population = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=8)
-lmic = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 9)
-mark_cap = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 7)
+path = 'list_of_countries_index.xlsx'
+population = pd.read_excel(path, sheet_name=8)
+lmic = pd.read_excel(path , sheet_name= 9)
+mark_cap = pd.read_excel(path , sheet_name= 7)
 # returns = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name = 3 )
-famafrench = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  10)
-msci = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  11)
-prices = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  1)
-rate_ex = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  5)
+famafrench = pd.read_excel(path, sheet_name=  10)
+msci = pd.read_excel(path, sheet_name=  11)
+prices = pd.read_excel(path, sheet_name=  1)
+rate_ex = pd.read_excel(path, sheet_name=  5)
 
 
 mark_cap.set_index('Country', inplace = True)
