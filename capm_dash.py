@@ -15,16 +15,17 @@ st.set_page_config(layout="wide")
 st.markdown("""
     <h1 style="text-align: center;">LMIC DASHBOARD</h1>
 """, unsafe_allow_html=True) # Título
-
+path = 'list_of_countries_index.xlsx'
+path1 = 'historical indexes.xlsx'
 # Importar bases 
-population = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=8)
-lmic = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 9)
-mark_cap = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 7)
+population = pd.read_excel(path, sheet_name=8)
+lmic = pd.read_excel(path, sheet_name= 9)
+mark_cap = pd.read_excel(path, sheet_name= 7)
 # returns = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name = 3 )
-famafrench = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  10)
-msci = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  11)
-prices = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  1)
-rate_ex = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  5)
+famafrench = pd.read_excel(path, sheet_name=  10)
+msci = pd.read_excel(path, sheet_name=  11)
+prices = pd.read_excel(path, sheet_name=  1)
+rate_ex = pd.read_excel(path, sheet_name=  5)
 
 
 tab1, tab2, tab3, tab4 = st.tabs(["🌎 Map and groups", "📈 Graphs", '📊 Regresions', '🔗 Correlations'])
@@ -598,9 +599,9 @@ with tab3:
 # Correlaciones
 
 # Importar base
-prices1 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=0)
-rateex1 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=2)
-msci = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=1)
+prices1 = pd.read_excel(path1, sheet_name=0)
+rateex1 = pd.read_excel(path1, sheet_name=2)
+msci = pd.read_excel(path1, sheet_name=1)
 
 # Calcular retornos
 prices1.set_index('Country', inplace = True)
