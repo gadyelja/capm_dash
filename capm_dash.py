@@ -695,15 +695,7 @@ with tab4:
     st.plotly_chart(fig)
 
     
-    return_11 = return_11.reset_index()
-    return_12 = return_12.reset_index()
-    return_13 = return_13.reset_index()
-    return_14 = return_14.reset_index()
-    
-    st.write(return_11['Country'].count())
-    st.write(return_12['Country'].count())
-    st.write(return_13['Country'].count())
-    st.write(return_14['Country'].count())
+   
     
     
 
