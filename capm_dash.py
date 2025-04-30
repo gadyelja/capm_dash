@@ -19,7 +19,7 @@ st.markdown("""
 
 # Importar bases
 file1 = 'list_of_countries_index.xlsx'
-file2 = 'historical idexes.xlsx'
+file2 = 'historical indexes.xlsx'
 population = pd.read_excel(file1, sheet_name=8)
 lmic = pd.read_excel(file1 , sheet_name= 9)
 mark_cap = pd.read_excel(file1 , sheet_name= 7)
