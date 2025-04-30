@@ -1078,7 +1078,7 @@ with tab1:
     
     fig2 = px.line(
         df_l_corr,
-        x='Fecha',
+        x='Date',
         y='Correlación',
         color='Serie',
         color_discrete_map=color_map,
