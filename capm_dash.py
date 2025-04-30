@@ -17,15 +17,17 @@ st.markdown("""
     <h1 style="text-align: center;">LMIC DASHBOARD</h1>
 """, unsafe_allow_html=True) # Título
 
-# Importar bases 
-population = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=8)
-lmic = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 9)
-mark_cap = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 7)
+# Importar bases
+file1 = 'list_of_countries_index.xlsx'
+file2 = 'historical idexes.xlsx'
+population = pd.read_excel(file1, sheet_name=8)
+lmic = pd.read_excel(file1 , sheet_name= 9)
+mark_cap = pd.read_excel(file1 , sheet_name= 7)
 # returns = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name = 3 )
-famafrench = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  10)
-msci = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  11)
-prices = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  1)
-rate_ex = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=  5)
+famafrench = pd.read_excel(file1, sheet_name=  10)
+msci = pd.read_excel(file1, sheet_name=  11)
+prices = pd.read_excel(file1, sheet_name=  1)
+rate_ex = pd.read_excel(file1, sheet_name=  5)
 
 
 tab1, tab2 = st.tabs(["🌎 Map and groups", '📊 Regresions'])
@@ -602,12 +604,12 @@ with tab2:
 # Correlaciones
 
 # Importar base
-prices1 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=0)
-rateex1 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=2)
-msci = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\historical indexes.xlsx', sheet_name=1)
-lmic1 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 9)
-mark_cap11 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx' , sheet_name= 7)
-population11 = pd.read_excel(r'C:\Users\gadyh\OneDrive\Documentos\UNISABANA\CAPM - WORLDBANK\list_of_countries_index.xlsx', sheet_name=8)
+prices1 = pd.read_excel(file2, sheet_name=0)
+rateex1 = pd.read_excel(file2, sheet_name=2)
+msci = pd.read_excel(file2, sheet_name=1)
+lmic1 = pd.read_excel(file1 , sheet_name= 9)
+mark_cap11 = pd.read_excel(file1 , sheet_name= 7)
+population11 = pd.read_excel(file1, sheet_name=8)
 
 mark_cap11.set_index('Country', inplace = True)
 mark_cap11 = mark_cap11.iloc[:, 0:1]
